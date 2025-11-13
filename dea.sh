@@ -15,7 +15,7 @@ git config credential.helper manager
 read -s -p "token: " ghtoken
 echo 
 
-git remote set-url origin https://jenisov:${ghtoken}@github.com/jenisov/goroda
+git remote set-url origin https://jenisov:${ghtoken}@github.com/algoyouth/goroda
 
 #git add $1.ipynb
 git add -A
