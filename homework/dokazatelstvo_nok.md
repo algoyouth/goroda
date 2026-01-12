@@ -7,17 +7,16 @@
 - **НОК(x, y)** — наименьшее общее кратное чисел x и y
 
 Известное свойство:
-\[ \text{НОК}(x, y) = \frac{x \cdot y}{\text{НОД}(x, y)} \]
+$` \text{НОК}(x, y) = \frac{x \cdot y}{\text{НОД}(x, y)} `$
 
 ## Представление через простые множители
 
 Любое натуральное число можно представить через разложение на простые множители. Пусть:
+$` a = p_1^{\alpha_1} \cdot p_2^{\alpha_2} \cdot \ldots \cdot p_k^{\alpha_k} `$
 
-\[ a = p_1^{\alpha_1} \cdot p_2^{\alpha_2} \cdot \ldots \cdot p_k^{\alpha_k} \]
+$` b = p_1^{\beta_1} \cdot p_2^{\beta_2} \cdot \ldots \cdot p_k^{\beta_k} `$
 
-\[ b = p_1^{\beta_1} \cdot p_2^{\beta_2} \cdot \ldots \cdot p_k^{\beta_k} \]
-
-\[ c = p_1^{\gamma_1} \cdot p_2^{\gamma_2} \cdot \ldots \cdot p_k^{\gamma_k} \]
+$` c = p_1^{\gamma_1} \cdot p_2^{\gamma_2} \cdot \ldots \cdot p_k^{\gamma_k} `$
 
 где \(\alpha_i, \beta_i, \gamma_i \geq 0\), и некоторые показатели могут быть равны 0.
 
@@ -25,7 +24,7 @@
 
 Наименьшее общее кратное двух чисел равно произведению простых множителей, каждый из которых взят с **максимальной степенью**, встречающейся в разложениях этих чисел:
 
-\[ \text{НОК}(x, y) = p_1^{\max(\alpha_1, \beta_1)} \cdot p_2^{\max(\alpha_2, \beta_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, \beta_k)} \]
+$` \text{НОК}(x, y) = p_1^{\max(\alpha_1, \beta_1)} \cdot p_2^{\max(\alpha_2, \beta_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, \beta_k)} `$
 
 ## Доказательство
 
@@ -33,7 +32,7 @@
 
 По определению НОК трёх чисел:
 
-\[ \text{НОК}(a, b, c) = p_1^{\max(\alpha_1, \beta_1, \gamma_1)} \cdot p_2^{\max(\alpha_2, \beta_2, \gamma_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, \beta_k, \gamma_k)} \]
+$` \text{НОК}(a, b, c) = p_1^{\max(\alpha_1, \beta_1, \gamma_1)} \cdot p_2^{\max(\alpha_2, \beta_2, \gamma_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, \beta_k, \gamma_k)} `$
 
 То есть для каждого простого множителя \(p_i\) берётся максимальная степень из трёх чисел.
 
@@ -41,13 +40,13 @@
 
 Сначала найдём НОК(b, c):
 
-\[ \text{НОК}(b, c) = p_1^{\max(\beta_1, \gamma_1)} \cdot p_2^{\max(\beta_2, \gamma_2)} \cdot \ldots \cdot p_k^{\max(\beta_k, \gamma_k)} \]
+$` \text{НОК}(b, c) = p_1^{\max(\beta_1, \gamma_1)} \cdot p_2^{\max(\beta_2, \gamma_2)} \cdot \ldots \cdot p_k^{\max(\beta_k, \gamma_k)} `$
 
 Обозначим \(m_i = \max(\beta_i, \gamma_i)\).
 
 Теперь найдём НОК(a, НОК(b, c)):
 
-\[ \text{НОК}(a, \text{НОК}(b, c)) = p_1^{\max(\alpha_1, m_1)} \cdot p_2^{\max(\alpha_2, m_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, m_k)} \]
+$` \text{НОК}(a, \text{НОК}(b, c)) = p_1^{\max(\alpha_1, m_1)} \cdot p_2^{\max(\alpha_2, m_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, m_k)} `$
 
 где \(m_i = \max(\beta_i, \gamma_i)\).
 
@@ -55,7 +54,7 @@
 
 Для любых трёх чисел x, y, z справедливо:
 
-\[ \max(x, \max(y, z)) = \max(x, y, z) \]
+$` \max(x, \max(y, z)) = \max(x, y, z) `$
 
 **Доказательство этого свойства:**
 - Пусть \(M = \max(y, z)\)
@@ -66,19 +65,19 @@
 
 Применяя это свойство к каждому показателю степени:
 
-\[ \text{НОК}(a, \text{НОК}(b, c)) = p_1^{\max(\alpha_1, \max(\beta_1, \gamma_1))} \cdot p_2^{\max(\alpha_2, \max(\beta_2, \gamma_2))} \cdot \ldots \]
+$` \text{НОК}(a, \text{НОК}(b, c)) = p_1^{\max(\alpha_1, \max(\beta_1, \gamma_1))} \cdot p_2^{\max(\alpha_2, \max(\beta_2, \gamma_2))} \cdot \ldots `$
 
-\[ = p_1^{\max(\alpha_1, \beta_1, \gamma_1)} \cdot p_2^{\max(\alpha_2, \beta_2, \gamma_2)} \cdot \ldots \]
+$` = p_1^{\max(\alpha_1, \beta_1, \gamma_1)} \cdot p_2^{\max(\alpha_2, \beta_2, \gamma_2)} \cdot \ldots `$
 
-\[ = \text{НОК}(a, b, c) \]
+$` = \text{НОК}(a, b, c) `$
 
 **Таким образом, доказано:**
 
-\[ \boxed{\text{НОК}(a, b, c) = \text{НОК}(a, \text{НОК}(b, c))} \]
+$` \boxed{\text{НОК}(a, b, c) = \text{НОК}(a, \text{НОК}(b, c))} `$
 
 ## Следствие
 
 Аналогично доказывается и другой вариант:
-\[ \text{НОК}(a, b, c) = \text{НОК}(\text{НОК}(a, b), c) \]
+$` \text{НОК}(a, b, c) = \text{НОК}(\text{НОК}(a, b), c) `$
 
 То есть операция НОК **ассоциативна**.
