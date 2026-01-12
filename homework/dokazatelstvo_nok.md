@@ -18,7 +18,7 @@ $` b = p_1^{\beta_1} \cdot p_2^{\beta_2} \cdot \ldots \cdot p_k^{\beta_k} `$
 
 $` c = p_1^{\gamma_1} \cdot p_2^{\gamma_2} \cdot \ldots \cdot p_k^{\gamma_k} `$
 
-где \(\alpha_i, \beta_i, \gamma_i \geq 0\), и некоторые показатели могут быть равны 0.
+где $`\alpha_i, \beta_i, \gamma_i \geq 0`$, и некоторые показатели могут быть равны 0.
 
 ## Ключевое свойство НОК
 
@@ -34,7 +34,7 @@ $` \text{НОК}(x, y) = p_1^{\max(\alpha_1, \beta_1)} \cdot p_2^{\max(\alpha_2,
 
 $` \text{НОК}(a, b, c) = p_1^{\max(\alpha_1, \beta_1, \gamma_1)} \cdot p_2^{\max(\alpha_2, \beta_2, \gamma_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, \beta_k, \gamma_k)} `$
 
-То есть для каждого простого множителя \(p_i\) берётся максимальная степень из трёх чисел.
+То есть для каждого простого множителя $`p_i`$ берётся максимальная степень из трёх чисел.
 
 ### Правая часть: НОК(a, НОК(b, c))
 
@@ -42,13 +42,13 @@ $` \text{НОК}(a, b, c) = p_1^{\max(\alpha_1, \beta_1, \gamma_1)} \cdot p_2^{\
 
 $` \text{НОК}(b, c) = p_1^{\max(\beta_1, \gamma_1)} \cdot p_2^{\max(\beta_2, \gamma_2)} \cdot \ldots \cdot p_k^{\max(\beta_k, \gamma_k)} `$
 
-Обозначим \(m_i = \max(\beta_i, \gamma_i)\).
+Обозначим $`m_i = \max(\beta_i, \gamma_i)`$.
 
 Теперь найдём НОК(a, НОК(b, c)):
 
 $` \text{НОК}(a, \text{НОК}(b, c)) = p_1^{\max(\alpha_1, m_1)} \cdot p_2^{\max(\alpha_2, m_2)} \cdot \ldots \cdot p_k^{\max(\alpha_k, m_k)} `$
 
-где \(m_i = \max(\beta_i, \gamma_i)\).
+где $`m_i = \max(\beta_i, \gamma_i)`$.
 
 ### Свойство максимума
 
@@ -57,8 +57,8 @@ $` \text{НОК}(a, \text{НОК}(b, c)) = p_1^{\max(\alpha_1, m_1)} \cdot p_2^{
 $` \max(x, \max(y, z)) = \max(x, y, z) `$
 
 **Доказательство этого свойства:**
-- Пусть \(M = \max(y, z)\)
-- Тогда \(\max(x, M)\) — это наибольшее из x и наибольшего из y, z
+- Пусть $`M = \max(y, z)`$
+- Тогда $`\max(x, M)`$ — это наибольшее из x и наибольшего из y, z
 - Это равно наибольшему из всех трёх чисел x, y, z
 
 ### Заключение
