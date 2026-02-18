@@ -1,5 +1,8 @@
 # Города
 
+Запуск Юпитер: 
+`jupyter notebook .`
+
 Работаем в [Jupyter](https://jupyter.org/try) и [MyBinder](https://mybinder.org)
 
 |   	|  mybinder 	|  colab 	|
